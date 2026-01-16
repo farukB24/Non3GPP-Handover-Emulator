@@ -1,0 +1,89 @@
+{
+  "gaming": {
+    "nr":   { "minDlMbps": 15,  "maxLatencyMs": 80,  "minSinrDb": -2,  "minRsrpDbm": -110 },
+    "wifi": { "minDlMbps": 10,  "maxLatencyMs": 120 },
+    "weights": { "latency": 1.4, "sinr": 0.6, "throughput": 1.0, "rsrp": 0.5 },
+    "strikes": 2,
+    "hysteresisMbps": 6,
+
+    "handover_params": {
+      "w1": 0.20, "w2": 0.50, "w3": 0.20, "w4": 0.10,
+      "theta": 0.08,
+      "tttMs": 150,
+      "hyst": 0.04,
+      "hysteresisUp": 0.03,
+      "hysteresisDown": 0.02,
+      "minWifiRssi": -82,
+      "maxWifiJitter": 120,
+      "maxWifiLoss": 10.0,
+      "dwellMs": 1400,
+      "minThrGainMbps": 0.0
+    }
+  },
+  
+  "video": {
+    "nr":   { "minDlMbps": 40, "maxLatencyMs": 150, "minSinrDb": -1,  "minRsrpDbm": -115 },
+    "wifi": { "minDlMbps": 30, "maxLatencyMs": 200 },
+    "weights": { "latency": 0.9, "sinr": 0.4, "throughput": 1.3, "rsrp": 0.4 },
+    "strikes": 2,
+    "hysteresisMbps": 8,
+
+    "handover_params": {
+      "w1": 0.25, "w2": 0.15, "w3": 0.50, "w4": 0.10,
+      "theta": 0.14,
+      "tttMs": 350,
+      "hyst": 0.07,
+      "hysteresisUp": 0.03,
+      "hysteresisDown": 0.02,
+      "minWifiRssi": -78,
+      "maxWifiJitter": 90,
+      "maxWifiLoss": 8.0,
+      "dwellMs": 1800,
+      "minThrGainMbps": 10.0
+    }
+  },
+
+  "web": {
+    "nr":   { "minDlMbps": 3,   "maxLatencyMs": 350, "minSinrDb": -5, "minRsrpDbm": -115 },
+    "wifi": { "minDlMbps": 2,   "maxLatencyMs": 450 },
+    "weights": { "latency": 0.8, "sinr": 0.4, "throughput": 0.7, "rsrp": 0.4 },
+    "strikes": 2,
+    "hysteresisMbps": 5,
+
+    "handover_params": {
+      "w1": 0.20, "w2": 0.25, "w3": 0.40, "w4": 0.15,
+      "theta": 0.10,
+      "tttMs": 220,
+      "hyst": 0.05,
+      "hysteresisUp": 0.02,
+      "hysteresisDown": 0.02,
+      "minWifiRssi": -80,
+      "maxWifiJitter": 120,
+      "maxWifiLoss": 12.0,
+      "dwellMs": 1500,
+      "minThrGainMbps": 5.0
+    }
+  },
+
+  "urllc": {
+    "nr":   { "minDlMbps": 5,  "maxLatencyMs": 60,  "minSinrDb": -1,  "minRsrpDbm": -110 },
+    "wifi": { "minDlMbps": 4,  "maxLatencyMs": 80 },
+    "weights": { "latency": 1.8, "sinr": 0.8, "throughput": 0.6, "rsrp": 0.5 },
+    "strikes": 3,
+    "hysteresisMbps": 10,
+
+    "handover_params": {
+      "w1": 0.15, "w2": 0.55, "w3": 0.20, "w4": 0.10,
+      "theta": 0.07,
+      "tttMs": 100,
+      "hyst": 0.08,
+      "hysteresisUp": 0.03,
+      "hysteresisDown": 0.02,
+      "minWifiRssi": -85,
+      "maxWifiJitter": 150,
+      "maxWifiLoss": 12.0,
+      "dwellMs": 1700,
+      "minThrGainMbps": 0.0
+    }
+  }
+}

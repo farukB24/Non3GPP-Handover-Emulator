@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- ANA APP TEMA — AppCompat tabanlı (zorunlu) -->
+    <style name="Theme.Non3GPPAccessEmulator" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+        <!-- Material bileşenler için uyumluluk -->
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+</resources>

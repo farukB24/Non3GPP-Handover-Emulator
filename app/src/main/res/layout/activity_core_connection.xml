@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== Connection Status ===== -->
+        <TextView
+            android:id="@+id/textViewCoreStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5G Core Connection: INACTIVE"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:padding="8dp" />
+
+        <!-- ===== Dual Metrics Container ===== -->
+        <LinearLayout
+            android:id="@+id/metricsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/textViewMetricsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 Live Metrics"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Two-column metrics -->
+            <LinearLayout
+                android:id="@+id/dualMetricsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- 3GPP block -->
+                <LinearLayout
+                    android:id="@+id/cellularBlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="#EFEFEF">
+
+                    <TextView
+                        android:id="@+id/textViewCellularTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3GPP (NR/LTE)"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView android:id="@+id/textViewCellLatency" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Latency: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewCellDownload" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DL Throughput: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewCellUpload" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UL Throughput: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewCellJitter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jitter: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewCellLoss" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Packet Loss: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewCellRsrp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="RSRP: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewCellSinr" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SINR: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+
+                </LinearLayout>
+
+                <!-- Non-3GPP block -->
+                <LinearLayout
+                    android:id="@+id/wifiBlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="#EFEFEF">
+
+                    <TextView
+                        android:id="@+id/textViewWifiTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non-3GPP (Wi-Fi)"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView android:id="@+id/textViewWifiLatency" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Latency: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewWifiDownload" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DL Throughput: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewWifiUpload" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UL Throughput: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewWifiJitter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jitter: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewWifiLoss" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Packet Loss: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewWifiRssi" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="RSSI: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+                    <TextView android:id="@+id/textViewWifiSinr" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SINR: —" android:textSize="14sp" android:fontFamily="monospace" android:padding="2dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Buttons ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/buttonToggleConnection"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Connect"
+                android:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- ===== Service Selector ===== -->
+        <LinearLayout
+            android:id="@+id/serviceSelectorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Service:"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerServiceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/service_types"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- ===== Clear Logs & Logs Section ===== -->
+        <Button
+            android:id="@+id/buttonClearLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧹 Clear Logs"
+            android:textAllCaps="false"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:elevation="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connection Logs:"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp" />
+
+        <ScrollView
+            android:id="@+id/logScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:background="#F7F7F7"
+            android:padding="8dp"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/textViewLogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="13sp"
+                android:scrollbars="vertical"
+                android:fontFamily="monospace" />
+        </ScrollView>
+
+    </LinearLayout>
+</ScrollView>

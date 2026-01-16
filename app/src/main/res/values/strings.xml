@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Non3GPPAccessEmulator</string>
+    <string-array name="service_types">
+    <item>Gaming</item>
+    <item>Video</item>
+    <item>Web</item>
+    <item>URLLC</item>
+    </string-array>
+
+</resources>

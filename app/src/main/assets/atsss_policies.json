@@ -1,0 +1,7 @@
+{
+    "gaming": { "preferredPath": "NR",   "splitRatio": 0.8, "latencyThresholdMs": 50,  "lossThresholdPct": 1.0 },
+    "video":  { "preferredPath": "WiFi", "splitRatio": 0.5, "latencyThresholdMs": 120, "lossThresholdPct": 3.0 },
+    "web":    { "preferredPath": "WiFi", "splitRatio": 0.4, "latencyThresholdMs": 300, "lossThresholdPct": 5.0 },
+    "urllc":  { "preferredPath": "NR",   "splitRatio": 1.0, "latencyThresholdMs": 10,  "lossThresholdPct": 0.1 }
+  }
+  

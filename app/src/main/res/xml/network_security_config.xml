@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- Her şeyi (HTTP + HTTPS) serbest bırakıyoruz -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <!-- System CA'lara güven -->
+            <certificates src="system" />
+            <!-- User CA'lara da güven (özellikle ofis Wi-Fi için gereklidir) -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Tüm domainler için HTTP/HTTPS izinli -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">speed.hetzner.de</domain>
+        <domain includeSubdomains="true">httpbin.org</domain>
+        <domain includeSubdomains="true">1.1.1.1</domain>
+        <domain includeSubdomains="true">google.com</domain>
+        <domain includeSubdomains="true">cloudflare.com</domain>
+    </domain-config>
+
+</network-security-config>
