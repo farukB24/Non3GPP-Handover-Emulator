@@ -142,7 +142,4 @@ This project was developed as part of a research study focusing on:
 
 The repository is shared to provide code transparency and reproducibility, not as a commercial or production-ready solution.
 
-# Author
-
-Developed by Faruk Baldiz
-For academic and research purposes.
+Developed for academic and research purposes.
